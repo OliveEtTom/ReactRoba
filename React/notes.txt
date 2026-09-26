@@ -1,0 +1,5 @@
+npx create-expo-app@latest // create app mobile/web
+npm run web // launch the application
+npm create vite@latest my-app // create app from scratch
+
+npx create-react-app my-app

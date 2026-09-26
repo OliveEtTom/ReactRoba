@@ -1,0 +1,20 @@
+{
+  "name": "React",
+  "dockerFile": "../Dockerfile",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "ms-python.python",
+    "ms-azuretools.vscode-docker",
+    "angular.ng-template"
+  ],
+  "forwardPorts": [5173],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated"
+}
