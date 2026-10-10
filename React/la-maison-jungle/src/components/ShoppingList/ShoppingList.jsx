@@ -1,5 +1,7 @@
 import { plantList } from "../../data/PlantList"
 import styles from './ShoppingList.module.css'
+import PlantItem from "../PlantItem/PlantItem"
+import CareScale from "../CareScale/CareScale"
 
 const ShoppingList = () => {
     const categories = plantList.reduce(
@@ -19,8 +21,17 @@ const ShoppingList = () => {
                 {plantList.map((plant) => (
                     <li key={plant.id} className={styles.lmjplantitem}>
                         {plant.name}
+                        <CareScale careType="water" scaleValue={plant.water}></CareScale>
+                        <CareScale careType="light" scaleValue={plant.light}></CareScale>
                         {plant.isSpecialOffer && <div className={styles.lmjsales}>Soldes</div>}
                     </li>
+                ))}
+            </ul>
+
+
+            <ul className={styles.lmjplantlist}>
+                {plantList.map((plant) => (
+                    <PlantItem name={plant.name} water={plant.water} light={plant.light}></PlantItem>
                 ))}
             </ul>
         </div>
