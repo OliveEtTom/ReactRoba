@@ -1,3 +1,4 @@
+import monstera from '../assets/monstera.jpg'
 export const plantList = [
     {
         name: 'monstera',
@@ -6,7 +7,8 @@ export const plantList = [
         isBestSale: true,
         isSpecialOffer: false,
         water: 1,
-        light: 2
+        light: 2,
+        cover: monstera
     },
     {
         name: 'ficus lyrata',
@@ -15,7 +17,8 @@ export const plantList = [
         isBestSale: false,
         isSpecialOffer: false,
         water: 2,
-        light: 3
+        light: 3,
+        cover: monstera
     },
     {
         name: 'pothos argenté',
@@ -24,7 +27,8 @@ export const plantList = [
         isBestSale: false,
         isSpecialOffer: false,
         water: 2,
-        light: 3
+        light: 3,
+        cover: monstera
     },
     {
         name: 'yucca',
@@ -33,7 +37,8 @@ export const plantList = [
         isBestSale: true,
         isSpecialOffer: false,
         water: 1,
-        light: 2
+        light: 2,
+        cover: monstera
     },
     {
         name: 'palmier',
@@ -42,6 +47,7 @@ export const plantList = [
         isBestSale: false,
         isSpecialOffer: true,
         water: 3,
-        light: 1
+        light: 1,
+        cover: monstera
     }
 ]

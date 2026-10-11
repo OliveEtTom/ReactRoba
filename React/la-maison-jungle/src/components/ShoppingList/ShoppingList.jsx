@@ -31,7 +31,7 @@ const ShoppingList = () => {
 
             <ul className={styles.lmjplantlist}>
                 {plantList.map((plant) => (
-                    <PlantItem name={plant.name} water={plant.water} light={plant.light}></PlantItem>
+                    <PlantItem name={plant.name} cover={plant.cover} water={plant.water} light={plant.light}></PlantItem>
                 ))}
             </ul>
         </div>

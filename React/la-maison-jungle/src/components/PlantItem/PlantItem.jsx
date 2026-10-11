@@ -1,9 +1,21 @@
 import styles from './PlantItem.module.css'
-const PlantItem = ({ name, water, light }) => {
+
+const handleClick = ({ name }) => {
+    console.log('✨ Ceci est un clic ✨' + name)
+}
+
+const handleClickEvent = (e) => {
+    console.log('✨ Ceci est mon event :', e)
+}
+
+
+const PlantItem = ({ name, cover, water, light }) => {
     const range = [1, 2, 3]
 
     return (
-        <div className={styles.plantitem}>
+        //<li className={styles.plantitem} onClick={() => handleClick({ name })}>
+        <li className={styles.plantitem} onClick={(e) => handleClickEvent({ e })}>
+            <span><img src={cover} width="64" height="64" /></span>
             <span>{name}</span>
             {range.map((rangeElem) =>
                 water >= rangeElem ? (
@@ -15,7 +27,7 @@ const PlantItem = ({ name, water, light }) => {
                     <span key="{rangeElem.toString()}">☀️</span>
                 ) : null
             )}
-        </div>
+        </li>
     )
 }
 
