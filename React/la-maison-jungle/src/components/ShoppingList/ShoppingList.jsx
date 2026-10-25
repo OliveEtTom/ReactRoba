@@ -1,52 +1,33 @@
+import { useState } from "react"
 import { plantList } from "../../data/PlantList"
-import styles from './ShoppingList.module.css'
 import PlantItem from "../PlantItem/PlantItem"
-import CareScale from "../CareScale/CareScale"
 
-const ShoppingList = () => {
+const ShoppingList = ({ cart, updateCart }) => {
+    // Petite précision : categories nous vient de la partie
+    // précédente pour récupérer toutes les catégories uniques de
+    // plantes.
     const categories = plantList.reduce(
-        (acc, plant) =>
-            acc.includes(plant.category) ? acc : acc.concat(plant.category),
+        (acc, elem) =>
+            acc.includes(elem.category) ? acc : acc.concat(elem.category),
         []
     )
 
     return (
-        <div>
+        <div className='lmj-shopping-list'>
             <ul>
                 {categories.map((cat) => (
                     <li key={cat}>{cat}</li>
                 ))}
             </ul>
-            <ul className={styles.lmjplantlist}>
-                {plantList.map((plant) => (
-                    <li key={plant.id} className={styles.lmjplantitem}>
-                        {plant.name}
-                        <CareScale careType="water" scaleValue={plant.water}></CareScale>
-                        <CareScale careType="light" scaleValue={plant.light}></CareScale>
-                        {plant.isSpecialOffer && <div className={styles.lmjsales}>Soldes</div>}
-                    </li>
-                ))}
-            </ul>
-
-
-            <ul className={styles.lmjplantlist}>
-                {plantList.map((plant) => (
-                    <PlantItem name={plant.name} cover={plant.cover} water={plant.water} light={plant.light}></PlantItem>
+            <ul className='lmj-plant-list'>
+                {plantList.map(({ id, cover, name, water, light }) => (
+                    <div key={id}>
+                        <PlantItem cover={cover} name={name} water={water} light={light} />
+                        <button onClick={() => updateCart(cart + 1)}>Ajouter</button>
+                    </div>
                 ))}
             </ul>
         </div>
     )
-    /*return (
-        <ul>
-            {plantList.map((plant) => (
-                <li key={plant.id}>
-                    {plant.isBestSale && <span>🔥 </span>}
-                    {plant.name}
-                </li>
-            ))}
-        </ul>
-    )*/
-
 }
-
 export default ShoppingList
