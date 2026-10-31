@@ -13,18 +13,17 @@ const PlantItem = ({ name, cover, water, light }) => {
     const range = [1, 2, 3]
 
     return (
-        //<li className={styles.plantitem} onClick={() => handleClick({ name })}>
         <li className={styles.plantitem} onClick={(e) => handleClickEvent({ e })}>
-            <span><img src={cover} width="64" height="64" /></span>
-            <span>{name}</span>
+            <span className={styles.plantitemspan}><img className={styles.plantitemimage} src={cover} /></span>
+            <h4 className={styles.plantitemspan}>{name}</h4>
             {range.map((rangeElem) =>
                 water >= rangeElem ? (
-                    <span key="{rangeElem.toString()}">💧</span>
+                    <span className={styles.plantitemspan} key="{rangeElem.toString()}">💧</span>
                 ) : null
             )}
             {range.map((rangeElem) =>
                 light >= rangeElem ? (
-                    <span key="{rangeElem.toString()}">☀️</span>
+                    <span className={styles.plantitemspan} key="{rangeElem.toString()}">☀️</span>
                 ) : null
             )}
         </li>

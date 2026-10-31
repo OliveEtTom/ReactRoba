@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Footer.module.css'
+import styles from './Footer.module.css'
 
 const checkValue = (value) => {
     if (!value.includes('@')) {
@@ -11,12 +11,12 @@ const Footer = () => {
     const [inputValue, setInputValue] = useState('')
 
     return (
-        <footer className='lmj-footer'>
-            <div className='lmj-footer-elem'>
+        <footer className={styles.lmjfooter}>
+            <div className={styles.lmjfooterelem}>
                 Pour les passionné·e·s de plantes 🌿🌱🌵
             </div>
-            <div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
-            <textarea
+            <div className={styles.lmjfooterelem}>Laissez-nous votre mail :</div>
+            <textarea className={styles.lmjfooterarea}
                 value={inputValue}
                 onChange
                 ={(e) => setInputValue(e.target.value)}

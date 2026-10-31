@@ -1,4 +1,4 @@
-.lmj-footer {
+.lmjfooter {
     color: black;
     padding: 32px;
     border-top: solid 3px black;
@@ -9,6 +9,11 @@
     font-weight: 500;
 }
 
-.lmj-footer-elem {
+.lmjfooterelem {
     margin-bottom: 10px;
+}
+
+.lmjfooterarea {
+    width: 60%;
+    height: 150px;
 }

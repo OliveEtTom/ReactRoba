@@ -3,8 +3,22 @@
     background-color: #31b572;
     padding: 32px;
     color: #f8f9fa;
+    border: 1px solid black;
+    text-align: left;
+    height: 75%;
 }
 
 .cart_button {
     background-color: #31b572;
+    border: 0px;
+    text-align: right;
+    border-radius: 4px;
+}
+
+.cart_button:hover {
+    background-color: #31b572;
+    border: 0px;
+    text-align: right;
+    border-radius: 4px;
+    color: white
 }

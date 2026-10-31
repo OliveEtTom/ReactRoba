@@ -5,9 +5,32 @@
 
 .lmjplantlist {
     color: white;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    text-align: center;
 }
 
 .lmjsales {
     color: gold;
     font-size: large;
+}
+
+.lmjplantlistbutton {
+
+    background-color: #31b572;
+    border: 0px;
+    text-align: right;
+    border-radius: 4px;
+    font-size: medium;
+}
+
+.lmjplantlistbutton:hover {
+    background-color: #31b572;
+    border: 0px;
+    text-align: right;
+    border-radius: 4px;
+    color: white;
+    font-size: medium;
 }

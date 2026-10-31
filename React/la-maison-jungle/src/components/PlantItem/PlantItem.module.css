@@ -1,4 +1,16 @@
 .plantitem {
     background-color: white;
     color: black;
+    line-height: 0;
+    display: table-cell;
+}
+
+.plantitemspan {
+    line-height: 10px;
+}
+
+.plantitemimage {
+    height: 128px;
+    width: 128px;
+    border-radius: 4px;
 }

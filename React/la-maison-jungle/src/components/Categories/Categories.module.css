@@ -1,0 +1,23 @@
+select {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: medium;
+}
+
+button {
+    background-color: #31b572;
+    border: 0px;
+    text-align: right;
+    border-radius: 4px;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: #31b572;
+    border: 0px;
+    text-align: right;
+    border-radius: 4px;
+    color: white;
+    font-size: medium;
+}
